@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: notificacao
+
+  mail:
+    host: "${HOST}"
+    port: "${PORT}"
+    username: "${USER_NAME}"
+    password: "${USER_PASSWORD}"
+    protocol: "${PROTOCOL}"
+    properties:
+      mail:
+        smtp:
+          socketFactory:
+            port: "${PORT}"
+            class: javax.net.ssl.SSLSocketFactory
+            fallback: false
+          auth: true
+          starttls:
+            enable: true
+          connectiontimeout: 5000
+          timeout: 3000
+          writetimeout: 5000
+thymeleaf:
+  enabled: true
+
+envio:
+  email:
+    remetente: contato@email.pbautomacoes.com.br
+    nomeRemetente: "PB Automações"
+
+server:
+  port: 8080

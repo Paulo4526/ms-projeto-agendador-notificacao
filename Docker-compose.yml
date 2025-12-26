@@ -1,0 +1,26 @@
+version: "3.9"
+
+services:
+  api:
+    container_name: api-agendador-notificacao
+    build: .
+    restart: on-failure
+    ports:
+      - "8085:8080"
+    environment:
+      #Aqui o host do seu SMTP ex: smtp.mailgun.org
+      HOST:
+      #Aqui o UserName do seu SMTP
+      USER_NAME:
+      #Aqui o Password para acesso ao seu smtp
+      USER_PASSWORD:
+      #Aqui a porta de protocolo que será usado EX: 25, 465, 2525 e etc.
+      PORT:
+      #Aqui o protocolo é fixado como SMTP
+      PROTOCOL: smtp
+    networks:
+      - agendador-notificacao
+
+networks:
+  agendador-notificacao:
+    driver: bridge
