@@ -44,9 +44,6 @@ e <strong>boas práticas de arquitetura backend</strong>.
 <h3>🔄 GitHub Actions</h3>
 <p>Pipeline de CI para build e testes automatizados.</p>
 
-<h3>🧪 JUnit 5</h3>
-<p>Testes automatizados para garantir qualidade e estabilidade.</p>
-
 <hr>
 
 <h2>🏗️ Conceitos Abordados</h2>
